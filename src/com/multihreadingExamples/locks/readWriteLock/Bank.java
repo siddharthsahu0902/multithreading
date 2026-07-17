@@ -1,4 +1,4 @@
-package com.threadsExamples.locks.readWriteLock;
+package com.multihreadingExamples.locks.readWriteLock;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;

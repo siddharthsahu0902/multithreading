@@ -1,4 +1,4 @@
-package com.threadsExamples;
+package com.multihreadingExamples.threadsAndRunnable;
 
 public class DaemonThread extends Thread {
     @Override

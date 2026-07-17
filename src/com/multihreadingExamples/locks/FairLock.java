@@ -1,13 +1,13 @@
-package com.threadsExamples.locks;
+package com.multihreadingExamples.locks;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class UnfairLock {
-    private final Lock unfairLock = new ReentrantLock();
+public class FairLock {
+    private final Lock fairLock = new ReentrantLock(true);
 
     public void accessResouces(){
-        unfairLock.lock();
+        fairLock.lock();
         try{
             System.out.println("Accessing Resouces by accquring the lock by " + Thread.currentThread().getName());
             Thread.sleep(1000);
@@ -17,11 +17,11 @@ public class UnfairLock {
         }
         finally{
             System.out.println("Releasing the lock by " + Thread.currentThread().getName());
-            unfairLock.unlock();
+            fairLock.unlock();
         }
     }
     public static void main(String[] args) {
-        UnfairLock lock = new UnfairLock();
+        FairLock lock = new FairLock();
         Runnable task  = new Runnable() {
             @Override
             public void run() {

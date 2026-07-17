@@ -1,4 +1,4 @@
-package com.threadsExamples;
+package com.multihreadingExamples.threadsAndRunnable;
 
 public class ThreadStates extends Thread{
     @Override

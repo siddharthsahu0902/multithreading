@@ -1,4 +1,4 @@
-package com.threadsExamples.syncrhonized;
+package com.multihreadingExamples.syncrhonized;
 
 public class SyncEg extends Thread{
 

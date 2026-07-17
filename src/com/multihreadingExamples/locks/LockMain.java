@@ -1,4 +1,4 @@
-package com.threadsExamples.locks;
+package com.multihreadingExamples.locks;
 
 public class LockMain {
 

@@ -1,4 +1,4 @@
-package com.threadsExamples.locks;
+package com.multihreadingExamples.locks;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
