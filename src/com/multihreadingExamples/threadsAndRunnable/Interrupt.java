@@ -10,7 +10,7 @@ public class Interrupt extends Thread{
         try {
             Thread.sleep(1000);
             System.out.println("tHREAD : "  + Thread.currentThread().getName() + " RUNNING");
-            Thread.yield();
+            Thread.yield(); // gives up CPU if anohter thread wants to run.
         } catch (InterruptedException e) {
             throw new RuntimeException("Thread interrupted: " + e);
         }
