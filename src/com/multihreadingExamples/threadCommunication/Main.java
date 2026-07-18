@@ -58,7 +58,7 @@ class Producer extends Thread {
     }
 }
 
-class Consumer extends Thread {
+class Consumer implements Runnable {
 
     private SharedBuffer buffer;
 
@@ -85,7 +85,7 @@ public class Main {
         SharedBuffer buffer = new SharedBuffer();
 
         Producer producer = new Producer(buffer);
-        Consumer consumer = new Consumer(buffer);
+        Thread consumer = new Thread(new Consumer(buffer));
 
         producer.start();
         consumer.start();
