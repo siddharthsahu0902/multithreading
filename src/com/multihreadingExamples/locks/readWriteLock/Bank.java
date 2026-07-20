@@ -5,7 +5,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class Bank {
     private int amount = 1000;
-    ReentrantReadWriteLock lock = new ReentrantReadWriteLock();
+    ReentrantReadWriteLock lock = new ReentrantReadWriteLock(true);
     // Try with fairness:
 //    ReentrantReadWriteLock lock = new ReentrantReadWriteLock(true);
     private Lock readLock = lock.readLock();

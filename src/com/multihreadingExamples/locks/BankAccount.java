@@ -12,7 +12,7 @@ public class BankAccount {
     public void withdraw(int amount) throws InterruptedException {
         System.out.println("Thread " + Thread.currentThread().getName() + " Attempt to Withdrawing "+amount);
         try{
-            if(lock.tryLock(1000, TimeUnit.MILLISECONDS)) {
+            if(lock.tryLock(4000, TimeUnit.MILLISECONDS)) {
                 if(balance >= amount) {
                     try{
                         System.out.println("Thread " + Thread.currentThread().getName() + " Withdrawing "+amount);
