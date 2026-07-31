@@ -69,13 +69,16 @@ class OddThread implements Runnable{
 class Run{
     public static void main(String[] args) throws InterruptedException {
         EvenAndOdd evenAndOdd = new EvenAndOdd();
-        EvenThread evenRunnable = new EvenThread(evenAndOdd);
-        OddThread oddRunnable= new OddThread(evenAndOdd);
+        Runnable evenRunnable = new EvenThread(evenAndOdd);
+        Runnable oddRunnable= new OddThread(evenAndOdd);
 
         Thread odd = new Thread(oddRunnable);
         Thread even  = new Thread(evenRunnable);
 
         odd.start();
         even.start();
+
+        odd.join();
+        even.join();
     }
 }
