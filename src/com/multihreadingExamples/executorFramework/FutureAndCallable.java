@@ -29,5 +29,7 @@ public class FutureAndCallable {
 
         System.out.println("Executing the further code.");
 
+        executor.shutdown();
+
     }
 }
